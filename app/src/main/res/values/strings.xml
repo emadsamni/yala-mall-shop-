@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Yala Mall(Shop)</string>
+    <string name="internet_error">خطا في الانترنت</string>
+    <string name="update">تحديث</string>
 </resources>

@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 import im.delight.android.webview.AdvancedWebView;
 
@@ -63,17 +64,17 @@ public class MainActivity extends AppCompatActivity  implements AdvancedWebView.
 
     @Override
     public void onPageStarted(String url, Bitmap favicon) {
-
+           ProgressDialog.getInstance().show(this);
     }
 
     @Override
     public void onPageFinished(String url) {
-
+        ProgressDialog.getInstance().cancel();
     }
 
     @Override
     public void onPageError(int errorCode, String description, String failingUrl) {
-
+        Toast.makeText(this, "لا يوجد انترنت الرجاء اعادة تشغيل التطبيق", Toast.LENGTH_SHORT).show();
     }
 
     @Override
